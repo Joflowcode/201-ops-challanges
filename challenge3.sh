@@ -12,13 +12,18 @@
 #   command
 #}
 
+# declare variable
+
+loginhistory=(`cat ls /last`)
+
+# declare function
 
 function print_login_history {
-  echo $1
+  echo "$loginhistory"
 }
 
 #invoke function
 #print_login_history "cat ls /var/log "
-print_login_history `cat last`
+print_login_history
 
  
